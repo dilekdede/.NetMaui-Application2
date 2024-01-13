@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GörselÖdev2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GörselÖdev2"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <FlyoutItem >
+        <ShellContent
+        Title="Giriş"
+            Icon="login.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        
+        <ShellContent
+            Title="Kurlar"
+            Icon="para.png"
+            ContentTemplate="{DataTemplate local:Kurlar}"
+            Route="Kurlar"
+            />
+
+        <Tab Title="Haberler"
+           Icon="news.png">
+            <ShellContent
+              Title="Haberler"
+            
+             ContentTemplate="{DataTemplate local:Haberler}"/>
+            <ShellContent
+             Title="Ekonomi"
+             ContentTemplate="{DataTemplate local:Ekonomi}"/>
+            <ShellContent
+             Title="Bilim ve Teknoloji"
+             ContentTemplate="{DataTemplate local:BilimTeknoloji}"/>
+            <ShellContent 
+             Title="Spor"
+             ContentTemplate="{DataTemplate local:Spor}"/>
+            <ShellContent
+             Title="Sağlık"
+             ContentTemplate="{DataTemplate local:Saglik}"/>
+            <ShellContent
+             Title="Gündem"
+             ContentTemplate="{DataTemplate local:Gundem}"/>
+        </Tab>
+
+
+
+    <ShellContent
+        Title="Hava Durumu" 
+            Icon="cloudy.png"
+        ContentTemplate="{DataTemplate local:HavaDurumu}"
+        Route="HavaDurumu" />
+
+        <ShellContent
+        Title="Yapılacaklar"
+            Icon="checklist"
+        ContentTemplate="{DataTemplate local:Yapilacaklar}"
+        Route="Yapilacaklar" />
+
+        <ShellContent
+        Title="Ayarlar"
+            Icon="ayar.png"
+        ContentTemplate="{DataTemplate local:Ayarlar}"
+        Route="Ayarlar" />
+
+    </FlyoutItem>
+
+
+
+</Shell>
